@@ -1,0 +1,24 @@
+{
+    "name": "javasaurio",
+    "description": "javasaurio site",
+    "version": "0.0.1-2",
+    "author": "Ernesto Roldan <jeroldan@gmail.com>",
+    "keywords": [
+        "javasaurio"
+    ],
+    "dependencies": {
+        "express": "3.x",
+        "connect-flash": "0.1.1",
+        "consolidate": "0.9.1",
+        "swig": "0.14.0"
+    },
+    "devDependencies": {},
+    "main": "./app.js",
+    "engines": {
+        "node": "*"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "subdomain": "javasaurio"
+}
