@@ -1,0 +1,26 @@
+<polymer-element name="w-menuitem" attributes="label action" noscript>
+    <template>
+        <style>
+           :host {
+               display : table;
+               transition : background-color 600ms ease-in-out;
+               cursor : pointer;
+           }
+            
+           :host:hover { background-color: #CCCCCC; }
+            
+           :host:active { }
+            
+           li {
+               list-style-type: none;
+           }
+           
+           li a {
+              text-decoration : none;
+           }
+        </style>
+        <li>
+            <span id="label">{{label}}</span>
+        </li>
+    </template>
+</polymer-element>

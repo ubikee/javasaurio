@@ -25,6 +25,15 @@ app.use('/bower_components', express.static(__dirname+'/bower_components'));
 app.use('/widgets', express.static(__dirname+'/widgets'));
 app.use(express.static(__dirname + '/public'));
 
+/*
+app.use(express.session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+*/
+
+require('./app/routes.js', app);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

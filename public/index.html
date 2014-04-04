@@ -1,28 +1,53 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
    <title>javasaurio</title>
    <script src="bower_components/platform/platform.js"></script>
    <link rel="import" href="bower_components/polymer/polymer.html">
-   <link rel="import" href="widgets/w-twitter.html">
+   <link rel="import" href="widgets/w-menu.html">
+   <link rel="import" href="widgets/w-menuitem.html">
    <style>
       img.center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
       }
    </style>
+   <script src="//use.edgefonts.net/cabin-sketch.js"></script>
 </head>
-<body>
 
-   <img src="img/javasaurio.png" class="center">
-   
-   <div>
+<body>
+   <header style="background-color: #fcfbf6; padding: 10px">
+
+      <div style="width:360px; height: 360px; border: solid 1px #CCC; border-radius:50%; overflow: hidden; margin-left:auto; margin-right: auto; background-color:#FFF">
+         <div style="margin-top:40px;">
+            <img src="img/javasaurio.png" width="360" class="center">
+         </div>
+      </div>
+
+      <h1 style="font-family: cabin-sketch, sans-serif; font-size:64px"><center>JAVASAURIO</center></h1>
+
       <center>
-      <a class="twitter-timeline" href="https://twitter.com/javasaurio" data-widget-id="438744792780922880">Tweets por @javasaurio</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+         <button>ENTER</button>
       </center>
-   </div>
-   
+
+      <!--
+         <w-menu label="Main Menu">
+            <w-menuitem label="Welcome"></w-menuitem>
+            <w-menu label="Twitter">
+               <w-menuitem label="Twit of the Day"></w-menuitem>
+               <w-menuitem label="Time Line"></w-menuitem>
+               <w-menuitem label="Podium"></w-menuitem>
+            </w-menu>
+            <w-menu label="Store">
+               <w-menuitem label="Art Work"></w-menuitem>
+               <w-menuitem label="T-Shirt"></w-menuitem>
+            </w-menu>
+         </w-menu>
+         -->
+
+   </header>
 </body>
+
 </html>

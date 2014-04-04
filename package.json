@@ -1,24 +1,29 @@
 {
-    "name": "javasaurio",
-    "description": "javasaurio site",
-    "version": "0.0.1-2",
-    "author": "Ernesto Roldan <jeroldan@gmail.com>",
-    "keywords": [
-        "javasaurio"
-    ],
-    "dependencies": {
-        "express": "3.x",
-        "connect-flash": "0.1.1",
-        "consolidate": "0.9.1",
-        "swig": "0.14.0"
-    },
-    "devDependencies": {},
-    "main": "./app.js",
-    "engines": {
-        "node": "*"
-    },
-    "scripts": {
-        "start": "node app.js"
-    },
-    "subdomain": "javasaurio"
+   "name": "javasaurio",
+   "description": "javasaurio site",
+   "version": "0.0.1-3",
+   "author": "Ernesto Roldan <jeroldan@gmail.com>",
+   "keywords": [
+      "javasaurio"
+   ],
+   "dependencies": {
+      "express": "3.x",
+      "passport": "~0.1.17",
+      "passport-local": "~0.1.6",
+      "passport-facebook": "~1.0.2",
+      "passport-twitter": "~1.0.2",
+      "passport-google-oauth": "~0.1.5",
+      "connect-flash": "0.1.1",
+      "consolidate": "0.9.1",
+      "swig": "0.14.0"
+   },
+   "devDependencies": {},
+   "main": "./app.js",
+   "engines": {
+      "node": "*"
+   },
+   "scripts": {
+      "start": "node app.js"
+   },
+   "subdomain": "javasaurio"
 }

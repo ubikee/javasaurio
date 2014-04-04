@@ -1,0 +1,37 @@
+<polymer-element name="w-menu" attributes="label direction">
+   <template>
+      <style>
+         :host {
+            display : table;
+         }
+         .hidden {
+            max-height : 0px;
+            transition : max-height 600ms ease-out;
+         }
+         ul {
+            overflow : hidden;
+            padding-left: 10px;
+            max-height : 1000px;
+            transition : max-height 600ms ease-in;
+            margin-top : 0px;
+            margin-bottom : 0px;
+         }
+      </style>
+
+      <template bind if="{{label}}">
+         <w-menuitem label="{{label}}" on-click="{{toggle}}"></w-menuitem>
+      </template>
+
+      <ul id="box">
+         <content></content>
+      </ul>
+      
+   </template>
+   <script>
+      Polymer('w-menu', {
+         toggle: function() {
+            this.$.box.classList.toggle('hidden')
+         }
+      });
+   </script>
+</polymer-element>
