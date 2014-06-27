@@ -6,7 +6,6 @@
 * To change this template use Tools | Templates.
 */
 module.exports = function(app) {
-
 	app.get('/login', function(req, res) {
 		res.render('login.html')
    });
@@ -15,7 +14,7 @@ module.exports = function(app) {
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
-	// if user is authenticated in the session, carry on 
+	// if user is authenticated in the session, carry on
 	if (req.isAuthenticated())
 		return next();
 

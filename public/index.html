@@ -3,49 +3,69 @@
 
 <head>
    <title>javasaurio</title>
-   <script src="bower_components/platform/platform.js"></script>
-   <link rel="import" href="bower_components/polymer/polymer.html">
-   <link rel="import" href="widgets/w-menu.html">
-   <link rel="import" href="widgets/w-menuitem.html">
+   <script src="/js/platform.js"></script>
+   <script src="/js/widget5.js"></script>
+   <link rel="import" href="widgets/javasaurio2.html" tag="w5-javasaurio2">
    <style>
       img.center {
          display: block;
          margin-left: auto;
          margin-right: auto;
       }
+      
+      p {
+         color : red;
+      }
    </style>
    <script src="//use.edgefonts.net/cabin-sketch.js"></script>
+   <script>
+      window.setInterval(function() {
+         document.getElementById('javasaurio').blink();
+      }, 5000)
+       window.onload = function() {
+         var javasaurio = document.getElementById('javasaurio');
+         document.getElementById('javasaurio').addEventListener('mouseover', function(event) {
+            javasaurio.setAttribute('state', 'suspecting');
+         });
+         document.getElementById('javasaurio').addEventListener('mouseout', function(event) {
+            javasaurio.setAttribute('state', 'normal');
+         });
+      }
+   </script>
 </head>
 
 <body>
    <header style="background-color: #fcfbf6; padding: 10px">
 
-      <div style="width:360px; height: 360px; border: solid 1px #CCC; border-radius:50%; overflow: hidden; margin-left:auto; margin-right: auto; background-color:#FFF">
-         <div style="margin-top:40px;">
-            <img src="img/javasaurio.png" width="360" class="center">
-         </div>
+      <div style="width:260px; height: 260px; border: solid 1px #CCC; border-radius:50%; overflow: hidden; margin-left:auto; margin-right: auto; background-color:#FFF">
+         <w5-javasaurio id="javasaurio" size="330" statez="normal"></w5-javasaurio>
       </div>
 
-      <h1 style="font-family: cabin-sketch, sans-serif; font-size:64px"><center>JAVASAURIO</center></h1>
-
-      <center>
-         <button>ENTER</button>
-      </center>
-
-      <!--
-         <w-menu label="Main Menu">
-            <w-menuitem label="Welcome"></w-menuitem>
-            <w-menu label="Twitter">
-               <w-menuitem label="Twit of the Day"></w-menuitem>
-               <w-menuitem label="Time Line"></w-menuitem>
-               <w-menuitem label="Podium"></w-menuitem>
-            </w-menu>
-            <w-menu label="Store">
-               <w-menuitem label="Art Work"></w-menuitem>
-               <w-menuitem label="T-Shirt"></w-menuitem>
-            </w-menu>
-         </w-menu>
-         -->
+      <div>
+         <center>JAVASAURIO</center>
+      </div>
+      
+      <div>
+         <center>
+            <p>La compañía cómico-ridícula Javasaurio interpreta para todos ustedes el primer acto de #CiranoSaurio: <br> escena de la nariz... digo... de la preventa!</p>
+            <p>Agresivo:<br>¡ Si en mi preventa tuviera tal estimación me la amputara !</p>
+            <p>Amistoso:<br>¿ Se moja vuestro preventa al estimar o una calculadora excel usais al caso ?</p>
+            <p>Descriptivo:<br>¿Es un servicio? ¿una consultoría?<br>más... ¿ que digo ?<br>¡ si es una carnicería !</p>
+            <p>Burlón:<br>¿ Tanto a los clientes amáis que en la oferta vuestro trasero les dais ?</p>
+            <p>Brutal:<br>¿ Podéis entregar sin que el equipo quemado en la chimenea grite ?</p>
+            <p>Fino:<br>¡ Para imputar las horas de sobreesfuerzos muy útil ese JIRA a de seros !</p>
+            <p>Solicito:<br>¡ Compradle una corbata !<br>¡ Que parezca serio cada vez que da la lata !</p>
+            <p>Previsor:<br>¡ Tal calidad mata el balance !<br>¡ Recortad el equipo nunca el alcance !</p>
+            <p>Dramático:<br>¡ Evitad pruebas y demos!<br>¡Desactivadlos cuando despleguemos !</p>
+            <p>Enfático:<br>¡ Oh diagrama de Gannt ! ¿ que vendaval te podría desviar ?</p>
+            <p>Respetuoso:<br>¡ Cliente os beso la mano !<br>¡ Digna es vuestra RFP de un marciano !</p>
+            <p>Ingenuo:<br>¿ Que arquitecto de ilimitado talento a levantado este monumento ?</p>
+            <p>Lisonjero:<br>¡ Oferta como la vuestra es para la carnicasica linda muestra !</p>
+            <p>Rústico:<br>¿ Cobráis al peso este oferton ?<br>¿ Es una propuesta o un melón ?</p>
+            <p>Militar:<br>Si el proyecto se acomete, una cosa es segura:<br>! Que al final PETE!</p>
+            <p>Y finalmente a Priamo imitando:<br>Malhadada corbata que arriesgando de tu empresa el prestigio,<br>¡¡ no te sonroja tu propio beneficio !!</p>
+         </center>
+      </div>
 
    </header>
 </body>
